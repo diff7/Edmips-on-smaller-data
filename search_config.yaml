@@ -1,5 +1,6 @@
 arch: mixres18_w1234a234
 data:  '/home/dev/data_main/CORESETS/CIFAR10/'
+set_name: 'CIFAR10'
 num_classes: 10
 crop_size: 32
 results_dir: './results/'
@@ -20,8 +21,6 @@ print_freq: 100 # print frequency (default: 10)
 resume: "" # path to latest checkpoint (default: none)
 evaluate: false # evaluate model on validation set
 pretrained: true # use pre-trained model
-
-
 
 seed:  # seed for initializing training
 
