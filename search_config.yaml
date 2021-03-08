@@ -1,0 +1,37 @@
+arch: mixres18_w1234a234
+data:  '/home/dev/data_main/CORESETS/CIFAR10/'
+num_classes: 10
+crop_size: 32
+results_dir: './results/'
+# TRAINING SETTINGS
+
+workers: 4 # number of data loading workers (default: 4)
+epochs: 100 # number of total epochs to run
+step_epoch: 30 # number of epochs to decay learning rate
+start_epoch: 0 # manual epoch number (useful on restarts)
+batch_size: 256 # mini-batch size (default: 256), this is the total 
+lr: 0.1
+lra: 0.01
+momentum: 0.9
+weight_decay: 1e-4
+complexity_decay: 1e-4  # complexity decay (default: 1e-4)
+
+print_freq: 100 # print frequency (default: 10)
+resume: "" # path to latest checkpoint (default: none)
+evaluate: false # evaluate model on validation set
+pretrained: true # use pre-trained model
+
+
+
+seed:  # seed for initializing training
+
+# HARDWARE PARAMS
+
+gpu: 1 # GPU id to use
+dist_backend: nccl # distributed backend
+world_size: -1 # number of nodes for distributed training
+dist_url: tcp://224.66.41.62:23456 # url used to set up distributed training
+multiprocessing_distributed: false # Use multi-processing distributed training to launch
+rank: 1 # node rank for distributed training
+
+
